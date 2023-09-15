@@ -36,18 +36,11 @@ INSERT INTO `vehiculos`(`ID_V`, `Nombre`, `Precio`, `Marca`, `Año_Creacion`, `D
 USE CarShop;
 
 CREATE TABLE Registros(
-ID_R INT
+ID_R INT AUTO_INCREMENT
 NOT NULL
 PRIMARY KEY,
 Usuario INT,
 FOREIGN KEY (Usuario) REFERENCES Usuarios(ID_U),
 Vehiculo INT,
-FOREIGN KEY (Vehiculo) REFERENCES Vehiculos(ID_V),
-fecha DATETIME,
-Visualizacion int(100)
+FOREIGN KEY (Vehiculo) REFERENCES Vehiculos(ID_V)
 );
-
-
-/*crear otra tabla registro 
-registro cada que vez que haga un click 
-un procedimiento que agrupe la visulazaciones por auto y por usuario (que el usuario pueda ver).*/
